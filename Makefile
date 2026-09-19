@@ -1,7 +1,7 @@
-CC = gcc
+CC = clang
 CFLAGS = -Wall -Wextra -std=c11
 TARGET = webserver
-SOURCE = webserver.c
+SOURCE = main.c
 
 all: $(TARGET)
 
