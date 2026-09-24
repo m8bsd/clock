@@ -52,7 +52,7 @@ make
 
 Or manually:
 ```bash
-gcc -Wall -Wextra -std=c11 -o webserver webserver.c
+clang main.c -o main
 ```
 
 ### Run
@@ -62,7 +62,7 @@ make run
 
 Or:
 ```bash
-./webserver
+./main
 ```
 
 The server will start on `http://localhost:8080`
@@ -188,7 +188,7 @@ typedef void (*RouteHandler)(HttpRequest*, HttpResponse*);
 ## Code Structure
 
 ```
-webserver.c
+main.c
 ├── Utility Functions
 │   ├── parse_method()
 │   ├── parse_request()
@@ -318,7 +318,7 @@ This server demonstrates:
 ## Requirements
 
 - GCC compiler with C11 support
-- POSIX-compliant system (Linux, macOS, WSL)
+- POSIX-compliant system (*BSD, macOS)
 - Standard C library
 - POSIX sockets
 
